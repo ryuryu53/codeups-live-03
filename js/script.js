@@ -24,13 +24,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
+  $(".js-hamburger").click(function () {
+    if($(".js-hamburger").hasClass('is-active')) {
+      $(".js-hamburger").removeClass("is-active");
+      // $("html").toggleClass("is-fixed");
+      $(".js-sp-nav").fadeOut(300);
+    } else {
+      $(".js-hamburger").addClass("is-active");
+      $(".js-sp-nav").fadeIn(300);
+    }
   });
 
 

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-news {
+
+}
+// HIROKIさん、_p-news.scssを作らないで.p-news__itemsのスタイルを_p-news-content.scssで指定！？
+.p-news__items {
+  margin-top: rem(31);
+}
+
+.p-news__item + .p-news__item {
+  margin-top: rem(35);
+}
+
+// 下の書き方でもOK!!!
+// .p-news__item:nth-child(n + 2) {
+//   margin-top: rem(35);
+// }

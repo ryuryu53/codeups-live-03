@@ -19,6 +19,7 @@ const destPath = {
 // ブラウザーシンク（リアルタイムでブラウザに反映させる処理）
 const browserSync = require("browser-sync");
 const browserSyncOption = {
+    notify: false,  // 3-2 13:50で追加 右上に出てくる通知(browserSyncのポップアップ?)を消す
     server: "./"
 }
 const browserSyncFunc = () => {
