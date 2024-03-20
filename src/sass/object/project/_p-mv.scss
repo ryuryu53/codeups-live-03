@@ -19,6 +19,12 @@
   transform: translateY(-50%);
   left: rem(30);
   color: $white;
+  @include mq(md) {
+    width: 100%;  // これを指定しないと改行してしまう
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .p-mv__title {
@@ -26,6 +32,9 @@
   font-weight: $bold;
   font-family: $english-family;
   line-height: 1.1;
+  @include mq(md) {
+    font-size: rem(72);
+  }
 }
 
 .p-mv__subtitle {
@@ -33,10 +42,17 @@
   letter-spacing: 0.1em;
   line-height: 1.8125;
   margin-top: rem(17);
+  @include mq(md) {
+    font-size: rem(24);
+    margin-top: rem(15);
+  }
 }
 
 .p-mv__btn {
   margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(47);
+  }
 }
 
 .p-mv__scroll {

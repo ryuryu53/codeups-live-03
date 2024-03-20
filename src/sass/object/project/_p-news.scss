@@ -4,12 +4,26 @@
 
 }
 // HIROKIさん、_p-news.scssを作らないで.p-news__itemsのスタイルを_p-news-content.scssで指定！？
+.p-news__inner {
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .p-news__items {
   margin-top: rem(31);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(50);
+  }
 }
 
 .p-news__item + .p-news__item {
   margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(15);
+  }
 }
 
 // 下の書き方でもOK!!!

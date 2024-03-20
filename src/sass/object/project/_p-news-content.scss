@@ -1,7 +1,9 @@
 @use "global" as *;
 
 .p-news-content {
-  
+  @include mq(md) {
+    display: flex;
+  }
 }
 
 .p-news-content__meta {
@@ -29,6 +31,9 @@
 
 .p-news-content__link {
   // margin-top: rem(10);
+  @include mq(md) {
+    margin-left: rem(20);
+  }
 }
 
 .p-news-content__text {

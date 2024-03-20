@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-works__content {
+  @include mq(md) {   // 「背景色 2色」で検索　1-840/1260=33%
+    background: linear-gradient(90deg, transparent 0%, transparent 33%, #F0F0F0 33%, #F0F0F0 100%);
+    display: flex;
+    align-items: center;
+    padding-top: rem(60);   // topとbottomのpaddingにより、画像の上下にも背景色がつく！！linear-gradientだけでは足りない！
+    padding-bottom: rem(80);
+  }
+}
+
+.p-works__images {
+  position: relative;
+  @include mq(md) {
+    width: 59.5%;   // 750/1260
+  }
+}
+
+.p-works__text-body {
+  background-color: #F0F0F0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);  // マイナスマージン！(100%-100vw)/2
+  padding-top: rem(156);
+  padding-bottom: rem(60);
+  margin-top: rem(-116);
+  @include mq(md) {
+    width: 40.5%;
+    margin-left: initial;
+    padding: 0;
+    margin-top: 0;
+    background-color: transparent;
+  }
+}
+
+.p-works__text-block {
+  margin-top: rem(29);
+  @include mq(md) {
+    
+  }
+}
+
+.p-works__img {   // .p-cardでやったのと同じ！
+  position: relative;
+}
+
+.p-works__img::before {
+  display: block;
+  content: "";
+  padding-top: 68.955%;
+}
+
+.p-works__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-works__text {
+  text-align: center;   // ↓ .p-company__textと同じ
+  font-size: rem(14);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.79;
+}
+
+.p-works__btn {
+  text-align: center;
+  margin-top: rem(25);
+}
