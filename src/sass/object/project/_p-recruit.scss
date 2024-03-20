@@ -2,10 +2,24 @@
 
 .p-recruit__inner.l-inner {
   padding: 0;
+  @include mq(md) {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.p-recruit__wrapper {
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .p-recruit__img {   // .p-cardでやったのと同じ！
   position: relative;
+  @include mq(md) {
+    width: 60%;   // 665/1110=0.59909909･･･
+  }
 }
 
 .p-recruit__img::before {
@@ -28,6 +42,9 @@
   background-color: #F7F7F7;
   padding-top: rem(60);
   padding-bottom: rem(56);
+  @include mq(md) {
+    width: 40%;
+  }
 }
 
 .p-recruit__text-block {

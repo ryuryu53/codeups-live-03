@@ -7,7 +7,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: rem(-3) 0;  // ここまで完璧に合わせる必要ない
+  @include mq(md) {
+    background-image: url(../images/common/company-bg-pc.png);
+    background-repeat: no-repeat;
+    background-size: contain;   // containからmin(1300px, 100%)へ変更。min関数：最大値を1300pxにしてそうでないときを100%にする(だが、透過画像の上の部分が切れている･･･）⇒また、containへ変更（全部表示したいので）！
+    background-position: center center;
+    padding-top: rem(136);
+  }
 }
+
+// .p-company__inner.l-inner {
+//   max-width: rem(1300);   // この指定不要！背景画像はinner幅の中にあるのではなく、.p-companyで指定されている！（HIROKIさんでもこういうことがあるのか･･･）
+// }
 
 .p-company__contents {
   margin-top: rem(22);

@@ -3,7 +3,7 @@
 .p-header {
   height: rem(64);
   background-color: transparent;
-  // background-color: #21054D;
+  background-color: #21054D;
   z-index: 1000;
   position: fixed;  // .l-headerでも良いような気がするとの事
   width: 100%;  // .l-headerでも良いような気がするとの事
@@ -26,7 +26,7 @@
   }
 }
 
-.p-headedr__pc-nav {
+.p-header__pc-nav {
   height: inherit;
   display: none;
   @include mq(md) {

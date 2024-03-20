@@ -24,7 +24,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //ドロワーメニュー
-  $(".js-hamburger").click(function () {
+  $(".js-hamburger, .js-sp-nav").click(function () {  // .js-sp-navを追加しXマーク以外がクリックされてもドロワーメニューがfadeOutするようにした
     if($(".js-hamburger").hasClass('is-active')) {
       $(".js-hamburger").removeClass("is-active");
       // $("html").toggleClass("is-fixed");
@@ -35,7 +35,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+   // 画面幅のサイズが変わったら（まさたさん課題で追加したものをこちらでも追加）
+    $(window).on('resize', function () {
 
+    // xマークを三マークにする（.js-hamburgerの要素にクラス名is-activeがあれば削除する）
+    $('.js-hamburger').removeClass('is-active');
+
+    // .js-sp-navを閉じる（.js-sp-navが表示されていれば非表示にする）
+    $('.js-sp-nav').fadeOut(300);
+  });
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 

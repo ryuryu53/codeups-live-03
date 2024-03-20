@@ -2,8 +2,8 @@
 
 .p-footer {
   background-color: $bg-black;
-  padding-top: rem(60);
-  padding-bottom: rem(20);
+  padding-top: rem(60);   // SP版･PC版、paddingは同じ
+  padding-bottom: rem(60);  // 20になっていたが自分のカンプでは60
 }
 
 .p-footer__inner {
