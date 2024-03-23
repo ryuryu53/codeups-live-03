@@ -29,6 +29,10 @@
 
 .c-section-header--left {
   @include mq(md) {
-    text-align-last: left;
+    text-align: left;
   }
+}
+
+.c-section-header--white {
+  color: $white;
 }

@@ -54,6 +54,7 @@ img {
   max-width: 100%;
   display: block;
   width: 100%;
+  height: auto;   // 24.3.23追加（レイアウトシフト対策でimgタグにwidth･heightを指定するため）
 }
 
 /* Natural flow and rhythm in articles by default */

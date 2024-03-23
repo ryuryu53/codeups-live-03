@@ -3,7 +3,7 @@
 .p-news {
 
 }
-// HIROKIさん、_p-news.scssを作らないで.p-news__itemsのスタイルを_p-news-content.scssで指定！？
+// HIROKIさん、_p-news.scssを作らないで.p-news__itemsのスタイルを_p-news-content.scssで指定！？→ → → _p-archive-home.scssに「！？」までのコメントアウトと.p-news__innerと.p-news__itemsのルールセット(内容同じ)が書かれている！？さらに、29から32行目までも？？⇒ 意味がないので削除
 .p-news__inner {
   @include mq(md) {
     display: flex;
