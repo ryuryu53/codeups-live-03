@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-page-service {
+
+}
+
+.p-page-service__item {
+  @include mq(md) {
+    display: flex;
+    gap: rem(50);
+  }
+}
+
+.p-page-service__item:not(:first-child) {
+  margin-top: rem(69);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.p-page-service__image {
+  aspect-ratio: 335 / 211;
+  @include mq(md) {
+    width: 40%;
+  }
+}
+
+.p-page-service__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.p-page-service__text-block {
+  margin-top: rem(18);
+  @include mq(md) {
+    margin-top: 0;
+    width: 55.4%;
+  }
+}
+
+.p-page-service__title {
+  font-family: $english-family;   // HIROKIさん、忘れてる！
+  text-align: center;
+  font-size: rem(18);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(24);
+    text-align: left;
+  }
+}
+
+.p-page-service__text {
+  // font-family: $english-family;   // HIROKIさん、忘れてる！と思ったが、Montserratには日本語や漢字が含まれてないのでカンプがおかしいということか･･･
+  margin-top: rem(15);
+  font-size: rem(14);
+  letter-spacing: 0.05em;
+  line-height: calc(24 / 14);
+  @include mq(md) {
+    font-size: rem(15);   // 改行位置が揃わない！fz14にしてls0にしても、まだカンプの方が1行の文字数多い！？👉 動画のカンプ及びHIROKIさんの表示結果とは同じ！！？？自分のWindows上のXDカンプがおかしいのか？？👉 FigmaならOK！やってらんないよ･･･
+    line-height: calc(27 / 15);
+    margin-top: rem(20);
+  }
+}

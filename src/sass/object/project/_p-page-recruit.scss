@@ -1,0 +1,131 @@
+@use "global" as *;
+
+.p-page-recruit {
+  padding-top: rem(40);
+  padding-bottom: rem(80);
+  background-image: url("../images/common/bg-recruit.png");
+  background-repeat: repeat;
+  @include mq(md) {
+    padding-top: rem(116);
+    padding-bottom: rem(110);
+  }
+}
+
+.p-page-recruit__title {
+  color: #391E88;
+  text-align: center;
+}
+
+.p-page-recruit__main {
+  font-family: $english-family;   // 指定忘れてる･･･
+  font-size: rem(48);
+  font-weight: $bold;   // 指定忘れてる･･･
+  line-height: calc(56 / 48);
+  letter-spacing: 0.1em;
+  @include mq(md) {
+    font-size: rem(72);
+  }
+}
+
+.p-page-recruit__sub {
+  font-size: rem(18);
+  font-weight: 300;   // 指定忘れてる･･･400の方がカンプに近いかも？
+  letter-spacing: 0.05em;
+  margin-top: rem(12);
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.p-page-recruit__text {
+  font-size: rem(15);
+  font-weight: 300;   // 指定忘れてる･･･400の方がカンプに近いかも？
+  line-height: calc(27 / 15);
+  text-align: center;
+  margin-top: rem(19);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.p-page-recruit__image {
+  margin-top: rem(38);
+  width: 100vw;   // 横がくっついている（inner関係ない）innerから出す
+  margin-left: calc(50% - 50vw);  // マイナスマージン！これで左によって画像が左右横にピッタリくっつく！！このやり方覚える！！！
+}
+
+.p-page-recruit__recruit {
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(63);
+  }
+}
+
+.p-page-recruit__items {
+  margin-top: rem(27);
+}
+
+.p-page-recruit__item.p-page-recruit__item {
+  border: 1px solid #B8AED5;
+  border-radius: 10px;
+  background-color: $white;
+  padding: rem(28) rem(20);   // 右側の余白が25pxになっているが、20pxで統一しましょう
+}
+
+.p-page-recruit__item:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.p-page-recruit__job-title {
+  font-family: $english-family;   // HIROKIさん、指定忘れ
+  font-size: rem(16);
+  font-weight: $bold;
+  letter-spacing: 0.05em;
+  color: #391E88;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.p-page-recruit__lists {
+  padding-top: rem(14);   // 足りない分の余白を追加。「.p-common-lists__list」で上に18pxあるので、残り32-18=14px追加
+}
+
+.p-page-recruit__apply {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.p-page-recruit__apply p {
+  font-family: $english-family;   // HIROKIさん、指定忘れ
+  font-size: rem(12);
+  margin-top: rem(3);
+}
+
+.p-page-recruit__movies {
+  margin-top: rem(75);
+  @include mq(md) {
+    margin-top: rem(133);
+  }
+}
+
+.p-page-recruit__movie {
+  margin-top: rem(27);
+  position: relative;
+}
+
+.p-page-recruit__movie::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;  // 9÷16
+}
+
+.p-page-recruit__movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

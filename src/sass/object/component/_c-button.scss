@@ -3,6 +3,7 @@
 .c-button {
   text-align: center;
   display: inline-block;
+  font-family: $english-family;   // HIROKIさん、指定忘れ
   font-size: rem(14);
   font-weight: $bold;
   color: $white;

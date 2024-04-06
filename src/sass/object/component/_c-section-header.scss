@@ -36,3 +36,13 @@
 .c-section-header--white {
   color: $white;
 }
+
+.c-section-header__subPage {
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: 1.5;   // カンプにあるlight-heightの数字98は明らかにおかしい。1.5にしておく
+  letter-spacing: 0.05em;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
