@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.p-form {
+  letter-spacing: 0.05em;
+}
+
+.p-form__radio {
+  margin-top: rem(5);  // 見た目と乖離ができているとの事で15→5に訂正していた（自分も13→5に訂正）
+  display: flex;
+  flex-direction: column;
+  gap: rem(5);
+  @include mq(md) {
+    display: block;
+    gap: 0;   // gapを打ち消すとの事だが、blockだから不要では？実際なくても、「display: block プロパティによって gap の適用がブロックされています」とデベロッパーツールにあり
+  }
+}
+
+.p-form dl:not(:first-child) {
+  margin-top: rem(27);
+}
+
+.p-form__item dt {
+  font-size: rem(15);
+  line-height: 2;   // 実際はもっと大きいが2にしておく
+  font-weight: 600;   // W6は600を示している
+}
+
+.p-form__item dt span {
+  color: #391E88;
+  font-size: rem(12);
+  margin-left: rem(20);
+}
+
+.p-form__item dt span.p-form__tel-info {   // あんまりやりたくない･･･（詳細度を上げるため）
+  font-size: rem(12);
+  color: $black;
+  margin-left: 0;
+}
+
+.p-form__btn {
+  margin-top: rem(50);
+  text-align: center;
+}
