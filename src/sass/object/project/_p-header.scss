@@ -3,10 +3,14 @@
 .p-header {
   height: rem(64);
   background-color: transparent;
-  background-color: #21054D;
   z-index: 1000;
   position: fixed;  // .l-headerでも良いような気がするとの事
   width: 100%;  // .l-headerでも良いような気がするとの事
+  transition: 0.3s;   // これを入れたのでフワッと色がつくようになった･･･とHIROKIさんは言っていたが、自分が見た感じでは違いが分からなかった ⇒ 0.5s位からわずかに違いが感じられるか･･･自分鈍い･･･
+}
+
+.p-header.is-color {
+  background-color: #21054D;
 }
 
 .p-header__inner {

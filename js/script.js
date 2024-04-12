@@ -14,6 +14,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       topBtn.fadeOut();
     }
   });
+  
+  // ヘッダークラス名付与
+  let header = $('.p-header');
+  let headerheight = $('.p-header').height();
+  let height = $('.p-mv').height();
+  console.log('ヘッダーの高さ>>> +' + headerheight);
+  console.log('メインビューの高さ>>> +' + height);
+  console.log(height - headerheight);
+  $(window).scroll(function () {  // ↓ heightだけだと、下へスクロールしてヘッダーがメインビューから完全に出る直前に、ナビゲーションの白文字が白い背景の中に入り、文字が読めなくなる瞬間がある
+    if ($(this).scrollTop() > (height - headerheight)) {   // thisはwindowのことを示す
+      header.addClass('is-color');
+    } else {
+      header.removeClass('is-color');
+    }
+  });
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
@@ -46,7 +61,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
+  // 動画ではここの説明なかったと思う
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
     let header = $('header').innerHeight();

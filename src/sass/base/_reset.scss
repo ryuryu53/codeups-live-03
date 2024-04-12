@@ -28,7 +28,7 @@ dd {
 
 /* Set core root defaults */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  // jQにも同様のものがあり、機能が被るのか(?)動き出しがヌルっとした感じになる。まさたさん課題でも同じ現象あり。jQでやるかCSSでやるかどちらかにした方がよいと思う
 }
 
 /* Set core body defaults */
