@@ -5,13 +5,26 @@
 }
 
 .p-form__radio {
-  margin-top: rem(5);  // 見た目と乖離ができているとの事で15→5に訂正していた（自分も13→5に訂正）
+  margin-top: rem(5);  // 見た目と乖離ができているとの事で15→5に訂正していた（自分も13→5に訂正）24.7.18 WP化の際に下のルールセットからmargin-topと一緒に独立。残りのプロパティはspan.wpcf7-form-control.wpcf7-radioに当てた
+}
+
+span.wpcf7-form-control.wpcf7-radio {
   display: flex;
   flex-direction: column;
   gap: rem(5);
   @include mq(md) {
-    display: block;
+    // display: flex; // 24.7.18 WP化の際に間違いに気づく。block → flexに修正 ⇒ SP版にdisplay: flex;があるので、不要と判断しコメントアウト
+    flex-direction: row;  // 24.7.18 WP化の際に追加
     gap: 0;   // gapを打ち消すとの事だが、blockだから不要では？実際なくても、「display: block プロパティによって gap の適用がブロックされています」とデベロッパーツールにあり
+  }
+}
+
+// 24.7.18 WP化の際に追加
+.p-form__radio .wpcf7-list-item {
+  margin-left: 0;
+  display: block;
+  @include mq(md) {
+    display: inline-block;
   }
 }
 

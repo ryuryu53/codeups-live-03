@@ -393,6 +393,29 @@ select::-ms-expand {
           transform: rotate(-45deg);
 }
 
+.c-hidden-recruit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 32px;
+  font-size: 2rem;
+  color: red;
+  background-color: rgba(255, 255, 255, .7);
+}
+
 .c-mv-btn {
   display: inline-block;
   padding: 19px 70px;
@@ -1005,6 +1028,9 @@ select::-ms-expand {
 .p-form__radio {
   margin-top: 5px;
   margin-top: 0.3125rem;
+}
+
+span.wpcf7-form-control.wpcf7-radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1016,9 +1042,22 @@ select::-ms-expand {
   gap: 0.3125rem;
 }
 @media screen and (min-width: 768px) {
-  .p-form__radio {
-    display: block;
+  span.wpcf7-form-control.wpcf7-radio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 0;
+  }
+}
+
+.p-form__radio .wpcf7-list-item {
+  margin-left: 0;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .p-form__radio .wpcf7-list-item {
+    display: inline-block;
   }
 }
 
@@ -1407,12 +1446,14 @@ select::-ms-expand {
   margin-top: 1.6875rem;
 }
 
-.p-page-recruit__item.p-page-recruit__item {
+.p-page-recruit__item {
+  position: relative;
   border: 1px solid #B8AED5;
   border-radius: 10px;
   background-color: #fff;
   padding: 28px 20px;
   padding: 1.75rem 1.25rem;
+  overflow: hidden;
 }
 
 .p-page-recruit__item:not(:first-child) {

@@ -18,7 +18,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ヘッダークラス名付与
   let header = $('.p-header');
   let headerheight = $('.p-header').height();
-  let height = $('.p-mv').height();
+  let height = $('.js-mv-height').height();
   console.log('ヘッダーの高さ>>> +' + headerheight);
   console.log('メインビューの高さ>>> +' + height);
   console.log(height - headerheight);
